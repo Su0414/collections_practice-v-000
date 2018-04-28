@@ -1,4 +1,5 @@
 def sort_array_asc(array)
+<<<<<<< HEAD
 
  array.sort do |first, last|
   first <=> last
@@ -90,4 +91,74 @@ def add_s(array)
   end
   return s_words
 end 
+=======
+>>>>>>> 8dd3f72f1a44acd406a410ca2c93a518f1fd05a2
 
+ array.sort do |first, last|
+  first <=> last
+ end 
+ 
+end
+
+def sort_array_desc(array)
+
+ array.sort do |first, last|
+  last <=> first
+ end 
+ 
+end
+ 
+def sort_array_char_count(array)
+  
+  array.sort do |first, last|
+    first.length <=> last.length
+  end 
+  
+end 
+
+
+def swap_elements(array)
+  
+  array.each_with_index do |int, index|
+      
+      second = array[1]
+      third = array[2]
+     
+      if(index==1)
+        int[index] = third
+      end 
+      
+      if(index==2)
+        int[index] = second
+      end
+      
+    end 
+end
+
+def swap_elements_from_to(array, index, destination_index)
+  
+  
+end 
+
+
+def reverse_array(array)
+  array.reverse
+end 
+
+def kesha_maker(array)
+  # code here
+   
+        i = 0 
+        while i < array.length do 
+          if(i == 2)
+              array[i] = "$" 
+              yield array[i]
+            else
+              yield array[i] 
+          end
+          i = i + 1
+        end
+    array
+   
+
+end 
